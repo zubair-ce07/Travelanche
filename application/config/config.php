@@ -21,15 +21,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | If you need to allow multiple domains, remember that this file is still
 | a PHP script and you can easily do that on your own.
-<<<<<<< HEAD
 |
 
-jkjhjkhkjhk
-=======
-|AAAA
->>>>>>> 7592d1adfe5f34466ffcb921ac9e69e255a5ac9a
+
 */
-$config['base_url'] = 'http://localhost/travelanche/';
+$config['base_url'] = 'http://localhost:81/travelanche/';
 
 /*
 |--------------------------------------------------------------------------
