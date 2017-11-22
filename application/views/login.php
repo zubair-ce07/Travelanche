@@ -83,7 +83,7 @@ body {
         <label class="checkbox">
            <input type="checkbox" value="remember-me" id="rememberMe" name="remember_me"> Remember me
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <a href="<?php echo site_url('home/forgot_pass'); ?>" > <u>Forgot password?</u> </a>
+           <a href="<?php echo site_url('forgot_pass/forgot'); ?>" > <u>Forgot password?</u> </a>
         </label>
       <button class="btn btn-lg btn-primary btn-block" name="login" type="submit">Login</button> 
       <span><?php

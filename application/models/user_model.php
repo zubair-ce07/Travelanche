@@ -45,72 +45,37 @@ class User_model extends CI_model{
             }
     }
 
-    public function checkOldPass($old_password)
-    {
-        $this->db->where('email', $this->session->userdata('email'));
-        $this->db->where('password', $old_password);
-        $query = $this->db->get('users');
-        if($query->num_rows() > 0)
-            return 1;
-        else
-            return 0;
-    }
-
-    public function update_pwd($email,$pass){
-
-        $this->db->where('email', $email);
-        $this->db->where('pass',$pass);
-        $this->db->limit(1);
-        $query = $this->db->get('users');
-        if($query->num_rows() > 0){
-            $this->db->update('pass',$pass);
-        }
-        else{ return false;
-        }
-    }
-     public function Send_Code($phone)
-     {
+    public function check_phone($phone){
         if (isset($_POST['phone'])) 
-        {
-            $phone = $_POST['phone']; 
-            $this->db->where('phone', $phone);
-            $query = $this->db->get('users');
-            $data = $query->result();
-            foreach ($data as $row)
-            {   
-            $code = $row->phone;
-            if( $code == NULL)
-                return false;
-            else 
-                return true; 
-            }    
-        }
-        else 
-            return false;
+         $phone = $_POST['phone'];
+         $this->db->where('phone', $phone);
+         $query = $this->db->get('users');
+         $data = $query->result();      
+         foreach ($data as $row)
+         {   
+             $code = $row->phone;
+             if( $code == NULL)
+             return false;
+             else 
+             return true; 
+         }
+     }
+    public function update_otp($phone,$otp){
+
+        $this->db->where('otp' , $otp);
+        $this->db->where('phone', $phone);
+        $sql = "UPDATE users SET otp = $otp WHERE phone = $phone ";
+        $this->db->query($sql);
     }
-    
-    public function checks(){
-            
-        if(isset($_POST['submit']))
-                $code = $_POST['code'];
-                return $code;
+
+    public function check_otp($otp){
+        $this->db->where('otp' , $otp);
+        $query = $this->db->get('users');
+        return $query->result_array();
     }
-//    public function selectUser()
-//    {
-//       // $this->db->select('*');
-//        //$this->db->from('users');
-//        //$this->db->where('email',$email);
-//        //$this->db->where('pass',$password);
-//        $query = $this->db->get('users');
-//        if($query->num_rows() > 0)
-//        {
-//            foreach ($query->result() as $row){
-//                $data[] = $row;
-//            }
-//            return $data;
-//        }
-//        //return $query->num_rows();
-//        
-//    }
-}
-?>
+
+    public function update_pwd($pwd,$phone){
+        $this->db->where('pass', $pwd);
+        $sql = "UPDATE users SET pass = $pwd WHERE phone = $phone ";
+        $this->db->query($sql);
+    }

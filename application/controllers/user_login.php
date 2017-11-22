@@ -94,6 +94,7 @@ class User_login extends CI_Controller{
         {
             echo '<h2> Welcome ' .$this->session->userdata('email') . '</h2>';
             echo '<a href=" ' .site_url('user_login/logout'). ' " > Logout </a>';
+            $this->load->view('Login/main');
         }
         else
         {
