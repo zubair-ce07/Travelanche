@@ -44,14 +44,14 @@ class Home extends CI_Controller {
 			$this->load->view('signup');
 			$this->load->view('template/footer');
 		}
-                public function user(){
-                        $this->load->model('user_model');
+        public function user(){
+			$this->load->model('user_model');
 			$this->user_model->insert_data(); //function call from model
 			$this->load->view('template/header');
 	 		$this->load->view('success');
 			$this->load->view('template/footer');
 		}
-                public function forgot_pass(){
+        public function forgot_pass(){
 			$this->load->view('forgot_pass');
 		}
 		public function plan(){

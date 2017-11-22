@@ -79,3 +79,5 @@ class User_model extends CI_model{
         $sql = "UPDATE users SET pass = $pwd WHERE phone = $phone ";
         $this->db->query($sql);
     }
+}
+?>

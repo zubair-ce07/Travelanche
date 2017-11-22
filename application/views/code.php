@@ -2,7 +2,7 @@
 <html>
 
 <body>
-<form action="<?php echo base_url('forgot_pass/check'); ?>" method="POST">
+<form action="<?php echo site_url('forgot_pass/check_code'); ?>" method="POST">
 
 Enter Code: <input type="text" name="code"> <br>
 
