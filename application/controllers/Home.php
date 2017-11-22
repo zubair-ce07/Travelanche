@@ -54,4 +54,9 @@ class Home extends CI_Controller {
                 public function forgot_pass(){
 			$this->load->view('forgot_pass');
 		}
+		public function plan(){
+			$this->load->view('template/header');
+			$this->load->view('plan');
+			$this->load->view('template/footer');
+		}
 }
