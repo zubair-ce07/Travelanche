@@ -12,7 +12,7 @@
 
 <body>
 <div class="container">
-<form class="well form-horizontal" action="<?php echo site_url('home/user'); ?> " method="post"  id="contact_form">
+<form class="well form-horizontal" action="<?php echo site_url(''); ?> " method="post"  id="contact_form">
 <fieldset>
 <!-- Form Name -->
 <legend><center><h2><b>Plan Your Trip</b></h2></center></legend>
@@ -99,10 +99,6 @@
     </div>
   </div>
 </div>
-
-
-
-
 
 <!-- Text input-->
        

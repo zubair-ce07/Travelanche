@@ -6,6 +6,7 @@ class Home extends CI_Controller {
 		public function _construct(){
 			parent::_construct();
 			$this->load->model('insert');
+			$this->load->helper('path');
 		}
 		public function index(){
 			$this->load->view('template/header');
@@ -54,9 +55,4 @@ class Home extends CI_Controller {
         public function forgot_pass(){
 			$this->load->view('forgot_pass');
 		}
-		public function plan(){
-			$this->load->view('template/header');
-			$this->load->view('plan');
-			$this->load->view('template/footer');
-		}
-}
+	}

@@ -1,6 +1,7 @@
 <?php
 
 class User_login extends CI_Controller{
+    
     public function __construct() {
     parent::__construct();
     $this->load->helper('form'); //loading form helper
@@ -17,14 +18,13 @@ class User_login extends CI_Controller{
 
     public function user()
     {
-      
-    //     /* Retrieve session data */
-         $session_set_value = $this->session->all_userdata();
+        /* Retrieve session data */
+        $session_set_value = $this->session->all_userdata();
         // Check for remember_me data in retrieved session data
         if (isset($session_set_value['remember_me']) && $session_set_value['remember_me'] == "1") 
         {
                 $this->load->view('template/header');
-                $this->load->view('admin_panel');
+                $this->load->view('Login/main');
                 $this->load->view('template/footer');
         } 
         else
@@ -44,7 +44,7 @@ class User_login extends CI_Controller{
                 $email = $this->input->post('email');
                 $pass = $this->input->post('password');
                 $this->load->view('template/header');
-                $this->load->view('admin_panel');
+                $this->load->view('Login/main');
                 $this->load->view('template/footer');
             
                 $this->load->model('user_model');
@@ -92,9 +92,9 @@ class User_login extends CI_Controller{
     {
         if($this->session->userdata('email') != '')
         {
+            $this->load->view('main');
             echo '<h2> Welcome ' .$this->session->userdata('email') . '</h2>';
             echo '<a href=" ' .site_url('user_login/logout'). ' " > Logout </a>';
-            $this->load->view('Login/main');
         }
         else
         {
