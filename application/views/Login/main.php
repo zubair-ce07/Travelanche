@@ -42,37 +42,33 @@ a.btn-default{
     border-radius: 10px;
     color: #bf0f09;
 }
-
+.centered {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    font-size: 4em;
+    color: white;
+    transform: translate(-50%, -50%);
+}
 </style>
 
 <body>
-
-    <div class ="row">
-        <div class = "col-md-12 jumbotron">
-            <div class = "text-center">
-                <h1 style =" color:white;"> Travelanche </h1>
-                <p style = "color:white;"> Share what's rare </p>
-                <a href = "<?php echo site_url('Logged_in/Choice'); ?>" class = "btn btn-lg btn-success"> Plan a trip </a>
+    <img class="img-responsive" style="width:100%; height:400px; " src="<?php echo base_url('assets/images/Bost.png'); ?>" > </img>
+    <div class="centered"  style="">Travelanche</div>
+                <!-- <a href = "<?php echo site_url('Logged_in/Choice'); ?>" class = "btn btn-lg btn-success"> Plan a trip </a> -->
             </div>
        </div>
     </div> 
-    
 
+    
     <div class="container">
     <h1 style="text-align: center;"> Travelanche </h1>
     <h2 style="text-align: center;">Choose Whatever you want</h2>
     <hr>
     <div class="row">
-    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
-<<<<<<< HEAD
-        <a href="<?php echo site_url('Logged_in/Choice'); ?>" type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-cars" aria-hidden="true"></i> Plan a trip</a>
-        <a href="#" type="button" class="btn btn-default btn-lg btn-block"><i class="glyphicons glyphicons-user-vr-add"></i> Share a ride</a>
-=======
-         
-         
-        <a href="#" type="button" class="btn btn-default btn-lg btn-block"> Plan a trip</a>
+    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> --> 
+        <a href="<?php echo site_url('Logged_in/Choice'); ?>" type="button" class="btn btn-default btn-lg btn-block"> Plan a trip</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block">Share a ride</a>
->>>>>>> c66088d96696d71b857d0522c4c91ea734bef050
         <a href="#" type="button" class="btn btn-default btn-lg btn-block">Find a ride</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block">My trips</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block">Companies</a>
