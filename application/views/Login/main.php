@@ -46,13 +46,27 @@ a.btn-default{
 </style>
 
 <body>
+
+    <div class ="row">
+        <div class = "col-md-12 jumbotron">
+            <div class = "text-center">
+                <h1 style =" color:white;"> Travelanche </h1>
+                <p style = "color:white;"> Share what's rare </p>
+                <a href = "<?php echo site_url('Logged_in/Choice'); ?>" class = "btn btn-lg btn-success"> Plan a trip </a>
+            </div>
+       </div>
+    </div> 
+    
+
     <div class="container">
     <h2 style="text-align: center;">Choose Whatever you want</h2>
     <hr>
     <div class="row">
     <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
-        <a href="#" type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-cars" aria-hidden="true"></i> Plan a trip</a>
-        <a href="#" type="button" class="btn btn-default btn-lg btn-block"><i class="glyphicons glyphicons-user-vr-add"></i> Share a ride</a>
+         
+         
+        <a href="#" type="button" class="btn btn-default btn-lg btn-block"> Plan a trip</a>
+        <a href="#" type="button" class="btn btn-default btn-lg btn-block">Share a ride</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block">Find a ride</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block">My trips</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block">Companies</a>
@@ -61,17 +75,8 @@ a.btn-default{
     </div>
     <hr>   
 </div>
-<div class="container">
-    <div class ="row">
-        <div class = "col-md-12 jumbotron">
-            <div class = "text-center">
-                <h1> Travelanche </h1>
-                <p> Share what's rare </p>
-                <a href = "<?php echo site_url('Logged_in/Choice'); ?>" class = "btn btn-lg btn-success"> Plan a trip </a>
-            </div>
-       </div>
-    </div> 
     
+
     <div id="profile">
         <?php
         echo "Hello <b id='welcome'><i>" . $session_data['email'] . "</i> !</b>";
