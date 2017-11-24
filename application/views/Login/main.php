@@ -47,11 +47,12 @@ a.btn-default{
 
 <body>
     <div class="container">
+    <h1 style="text-align: center;"> Travelanche </h1>
     <h2 style="text-align: center;">Choose Whatever you want</h2>
     <hr>
     <div class="row">
     <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
-        <a href="#" type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-cars" aria-hidden="true"></i> Plan a trip</a>
+        <a href="<?php echo site_url('Logged_in/Choice'); ?>" type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-cars" aria-hidden="true"></i> Plan a trip</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block"><i class="glyphicons glyphicons-user-vr-add"></i> Share a ride</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block">Find a ride</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block">My trips</a>
