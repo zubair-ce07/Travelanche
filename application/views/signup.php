@@ -29,7 +29,7 @@
      <div class="input-group">
        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
        <input  name="first_name" placeholder="First Name" class="form-control" required=""  type="text">
-
+       <span class="text-danger"> <?php echo form_error('First Name'); ?></span>
      </div>
   </div>
 </div>
@@ -42,29 +42,32 @@
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
   <input name="last_name" placeholder="Last Name" class="form-control" required=""  type="text">
+      <span class="text-danger"> <?php echo form_error('Last Name'); ?></span>
     </div>
   </div>
 </div>
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label">City</label>  
+  <label class="col-md-4 control-label">Username</label>
   <div class="col-md-4 inputGroupContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="user_name" placeholder="City" class="form-control" required=""  type="text"  >
-    </div>
+    <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input  name="user_name" placeholder="City" class="form-control" required=""  type="text"  >
+    <span class="text-danger"> <?php echo form_error('Username'); ?></span>
+  </div>
   </div>
 </div>
 
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label" >Password</label> 
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-  <input name="user_password" placeholder="Password" class="form-control" id="pass1" required=""  type="password">
+  <label class="col-md-4 control-label" >Password</label>
+  <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+      <input name="user_password" placeholder="Password" class="form-control" id="pass1" required=""  type="password">
+      <span class="text-danger"> <?php echo form_error('Password'); ?></span>
     </div>
   </div>
 </div>
@@ -77,6 +80,7 @@
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
   <input name="confirm_password" id="pass2" class="form-control" required=""  type="password" placeholder="Confirm Password">
+      <span class="text-danger"> <?php echo form_error('Password Confirmation'); ?></span>
     </div>
   </div>
 </div>
@@ -98,8 +102,9 @@
   <label class="col-md-4 control-label">E-Mail</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email" placeholder="E-Mail Address" class="form-control" required="" type="text">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input name="email" placeholder="E-Mail Address" class="form-control" required="" type="text">
+      <span class="text-danger"> <?php echo form_error('Email'); ?></span>
     </div>
   </div>
 </div>

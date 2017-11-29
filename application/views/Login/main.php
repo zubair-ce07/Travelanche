@@ -67,11 +67,11 @@ a.btn-default{
     <hr>
     <div class="row">
     <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> --> 
-        <a href="<?php echo site_url('Logged_in/Choice'); ?>" type="button" class="btn btn-default btn-lg btn-block"> Plan a trip</a>
-        <a href="#" type="button" class="btn btn-default btn-lg btn-block">Share a ride</a>
-        <a href="#" type="button" class="btn btn-default btn-lg btn-block">Find a ride</a>
-        <a href="#" type="button" class="btn btn-default btn-lg btn-block">My trips</a>
-        <a href="#" type="button" class="btn btn-default btn-lg btn-block">Companies</a>
+        <a href="<?php echo site_url('Logged_in/Choice'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="plan_a_trip"> Plan a trip</a>
+        <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="share_a_ride"> Share a ride</a>
+        <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="find_a_ride"> Find a ride</a>
+        <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="my_trips"> My trips</a>
+        <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="companies"> Companies</a>
     </div>
         </div>
     </div>

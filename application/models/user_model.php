@@ -12,7 +12,6 @@ class User_model extends CI_model{
         $this->load->library('form_validation');
         $this->load->database();
     }
-
     public function insert_data()
     {
         $this->load->library('form_validation');
