@@ -59,6 +59,9 @@ class User_login extends CI_Controller{
 	                {
                     // Set remember me value in session
                     $this->session->set_userdata('remember_me', TRUE);
+                   // $this->session->set_userdata('remember_me', TRUE);
+                   // $this->session->set_userdata('remember_me', TRUE);
+
 	                }
                         $sess_data = array(
                         'email' => $email,
