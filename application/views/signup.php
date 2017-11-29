@@ -3,7 +3,10 @@
 
 <head>
 <!--  jquery  -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script language="javascript" type="text/javascript"> </script>
+
 </head>
 
 <style>
@@ -26,6 +29,7 @@
      <div class="input-group">
        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
        <input  name="first_name" placeholder="First Name" class="form-control" required=""  type="text">
+
      </div>
   </div>
 </div>
@@ -60,7 +64,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-  <input name="user_password" placeholder="Password" class="form-control" required=""  type="password">
+  <input name="user_password" placeholder="Password" class="form-control" id="pass1" required=""  type="password">
     </div>
   </div>
 </div>
@@ -72,7 +76,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-  <input name="confirm_password" placeholder="Confirm Password" class="form-control" required=""  type="password">
+  <input name="confirm_password" id="pass2" class="form-control" required=""  type="password" placeholder="Confirm Password">
     </div>
   </div>
 </div>
@@ -125,9 +129,12 @@
     &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button name="submit" type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
   </div>
 </div>
+
 </fieldset>
 </form>
 </div>
 </div><!-- /.container -->
 </body>
+
+
 </html>
