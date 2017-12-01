@@ -39,11 +39,11 @@ class User_model extends CI_model{
             }
         }
     }
-    public function fetch_data($email,$pass){
+    public function fetch_data($phone,$pass){
         
         //$this->db->select('email','pass');
         //$this->db->from('users');
-        $this->db->where('email', $email);
+        $this->db->where('phone', $phone);
         $this->db->where('pass', $pass);
         $this->db->limit(1);
         $query = $this->db->get('users');

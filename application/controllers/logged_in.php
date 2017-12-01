@@ -31,14 +31,9 @@ class Logged_in extends CI_Controller
 
     public function my_Trips()
     {
-        $user_data = $this->session->userdata('logged_in');
-        //echo $user_data['email'].$user_data['password'];
+
         $this->load->model('trip');
-        $user_trips['trips'] = $this->trip->My_trips($user_data['email']); //function call from model
-      /*  foreach ($user_trips as $row)
-        {
-            echo $row->vehicle;
-        }*/
+        $user_trips['trips'] = $this->trip->My_trips(); //function call from model
         $this->load->view('template/header');
         $this->load->view('Login/My_trips',$user_trips);
         $this->load->view('template/footer');

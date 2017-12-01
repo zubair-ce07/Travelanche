@@ -81,7 +81,7 @@ a.btn-default{
 
     <div id="profile">
         <?php
-        echo "Hello <b id='welcome'><i>" . $session_data['email'] . "</i> !</b>";
+        echo "Hello <b id='welcome'><i>" . $session_data['phone'] . "</i> !</b>";
         echo "Welcome to Admin Page";
         ?>
     </div>

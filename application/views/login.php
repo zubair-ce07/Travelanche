@@ -72,9 +72,9 @@ body {
       <h1 class="form-signin-heading">Welcome to Travelanche</h1>      
       <h2 class="form-signin-heading">Login</h2>
 
-      <input type="text" class="form-control" name="email" placeholder="Email"  autofocus="" />
+      <input type="text" class="form-control" name="phone" placeholder="Phone no."  autofocus="" />
 
-      <span class="text-danger"> <?php echo form_error('email'); ?></span>
+      <span class="text-danger"> <?php echo form_error('phone'); ?></span>
 
       <input type="password" class="form-control" name="password" placeholder="Password" autofocus="" />
 
