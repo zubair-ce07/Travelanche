@@ -73,7 +73,7 @@ a.btn-default{
         <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="my_trips"> My trips</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="companies"> Companies</a>
     </div>
-        </div>
+    </div>
     </div>
     <hr>   
 </div>
