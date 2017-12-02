@@ -31,7 +31,6 @@ class Logged_in extends CI_Controller
 
     public function my_Trips()
     {
-
         $this->load->model('trip');
         $user_trips['trips'] = $this->trip->My_trips(); //function call from model
         $this->load->view('template/header');

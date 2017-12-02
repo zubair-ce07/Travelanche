@@ -85,7 +85,8 @@ body {
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            <a href="<?php echo site_url('forgot_pass/forgot'); ?>" > <u>Forgot password?</u> </a>
         </label>
-      <button class="btn btn-lg btn-primary btn-block" name="login" type="submit">Login</button> 
+        <button class="btn btn-lg btn-primary btn-block" name="login" type="submit">Login</button>
+        <button class="btn btn-lg btn-primary btn-block" name="login" type="submit">Login as Company</button>
       <span><?php
       echo $this->session->flashdata("error");
       ?>
