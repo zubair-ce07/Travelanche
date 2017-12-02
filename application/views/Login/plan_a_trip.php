@@ -12,7 +12,7 @@
 
 <body>
 <div class="container">
-<form class="well form-horizontal" action="<?php echo site_url(''); ?> " method="post"  id="contact_form">
+<form class="well form-horizontal" action="<?php echo site_url('logged_in/Trip_info'); ?> " method="post"  id="contact_form">
 <fieldset>
 <!-- Form Name -->
 <legend><center><h2><b>Plan Your Trip</b></h2></center></legend>
@@ -60,7 +60,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-  <input name="start_date" placeholder="  Start Date" class="form-control" required=""  type="password">
+  <input name="start_date" placeholder="  Start Date" class="form-control" required=""  type="text">
     </div>
   </div>
 </div>
@@ -84,7 +84,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="	glyphicon glyphicon-time"></i></span>
-  <input name="pickup_time" placeholder="  Pickup Time" class="form-control" required=""  type="password">
+  <input name="pickup_time" placeholder="  Pickup Time" class="form-control" required=""  type="text">
     </div>
   </div>
 </div>
@@ -107,7 +107,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-        <input name="trip_disp" placeholder="  Trip Discription" class="form-control" required=""  type="text">
+        <input name="trip_disc" placeholder="  Trip Discription" class="form-control" required=""  type="text">
     </div>
   </div>
 </div>
@@ -121,7 +121,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4"><br>
-    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button name="submit" type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button name="Enter" type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
   </div>
 </div>
 </fieldset>

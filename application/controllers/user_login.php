@@ -30,7 +30,7 @@ class User_login extends CI_Controller{
         else
         {
             $this->load->library('form_validation');
-            $this->form_validation->set_rules('email' , 'Email', 'required');
+            $this->form_validation->set_rules('phone' , 'Phone', 'required');
             $this->form_validation->set_rules('password' , 'Password' , 'required');
             if($this->form_validation->run()==false)
             {
@@ -41,19 +41,11 @@ class User_login extends CI_Controller{
             } // if true
             else
             { 
-                $email = $this->input->post('email');
+                $phone = $this->input->post('phone');
                 $pass = $this->input->post('password');
-                $this->load->view('template/header');
-                $this->load->view('Login/main');
-                $this->load->view('template/footer');
-            
                 $this->load->model('user_model');
-                if($this->user_model->fetch_data($email,$pass))
+                if($this->user_model->fetch_data($phone,$pass))
                 {
-                   // $session_data = array
-                     //           (
-                       //         'email' => $email
-                         //       );
                     $remember = $this->input->post('remember_me');
                     if ($remember) 
 	                {
@@ -61,27 +53,30 @@ class User_login extends CI_Controller{
                     $this->session->set_userdata('remember_me', TRUE);
 	                }
                         $sess_data = array(
-                        'email' => $email,
+                        'phone' => $phone,
                         'password' => $pass
                                             );
                         $this->session->set_userdata('logged_in', $sess_data);
+<<<<<<< HEAD
                         // $this->session->set_userdata($session_data);
                     /* same controller called with method "enter" */
                         //redirect('user_login/enter' , 'refresh'); 
+=======
+                        $this->load->view('template/header');
+                        $this->load->view('Login/main');
+                        $this->load->view('template/footer');
+
+
+>>>>>>> fe4ca7407ed9eefb5325154e8e0f1d231da95314
                 }
                 else
                 {
-                    $this->session->set_flashdata('error' , 'Invalid Email and Password');
+                    $this->session->set_flashdata('error' , 'Invalid Phone number and Password');
                     /* will redirect to same login page to enter correct info */
                     redirect('user_login/login' ,'refresh'); 
                 }
             }
-      /*      else
-            {
-                $this->load->view('template/header.php');
-                $this->load->view('login.php');
-                $this->load->view('template/footer.php');
-            }*/
+
         }
     }
 
