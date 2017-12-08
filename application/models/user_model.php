@@ -16,27 +16,14 @@ class User_model extends CI_model{
     {
         $this->load->library('form_validation');
         if (isset($_POST['submit'])) {
-            $this->form_validation->set_rules('first_name', 'First Name', 'trim|required');
-            $this->form_validation->set_rules('last_name', 'Last Name', 'trim|required');
-            $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-            $this->form_validation->set_rules('user_name', 'Username', 'callback_username_check');
-            $this->form_validation->set_rules('password', 'Password', 'required|required|min_length[8]');
-            $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|matches[password]');
-            if ($this->form_validation->run() == false) {
-                $this->load->view('signup');
-            } else {
                 $f_name = $_POST['first_name'];
                 $l_name = $_POST['last_name'];
-                $user_name = $_POST['user_name'];
-                $pass = $_POST['user_password'];
-                $conf_pass = $_POST['confirm_password'];
-                $address = $_POST['address'];
-                $email = $_POST['email'];
-                $phone = $_POST['contact_no'];
-                $sql = "INSERT INTO users(first_name, last_name, user_name, pass,email,address, phone)
-                          VALUES('$f_name','$l_name','$user_name','$pass','$address','$email','$phone')";
+                $city = $_POST['city'];
+                $pass = $_POST['password'];
+                $phone = $_POST['phone'];
+                $sql = "INSERT INTO users(first_name, last_name, city, password, phone)
+                          VALUES('$f_name','$l_name','$city','$pass','$phone')";
                 $this->db->query($sql);
-            }
         }
     }
     public function fetch_data($phone,$pass){
@@ -44,7 +31,7 @@ class User_model extends CI_model{
         //$this->db->select('email','pass');
         //$this->db->from('users');
         $this->db->where('phone', $phone);
-        $this->db->where('pass', $pass);
+        $this->db->where('password', $pass);
         $this->db->limit(1);
         $query = $this->db->get('users');
         if ($query-> num_rows() > 0) {

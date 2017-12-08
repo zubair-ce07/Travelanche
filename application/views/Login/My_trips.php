@@ -1,6 +1,5 @@
 
 <?php
-echo "data inserted successfully" ;
 
 foreach ($trips as $row)
 {

@@ -28,7 +28,7 @@ class Logged_in extends CI_Controller
         $this->load->view('template/footer');
 
     }
-
+    
     public function my_Trips()
     {
         $this->load->model('trip');
