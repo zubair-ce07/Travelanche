@@ -57,7 +57,6 @@ class User_login extends CI_Controller{
                         'password' => $pass
                                             );
                         $this->session->set_userdata('logged_in', $sess_data);
-<<<<<<< HEAD
                         // $this->session->set_userdata($session_data);
                     /* same controller called with method "enter" */
                         //redirect('user_login/enter' , 'refresh'); 
