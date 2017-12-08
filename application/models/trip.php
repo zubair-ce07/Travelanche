@@ -34,7 +34,6 @@ class Trip extends CI_model
             }
 
     }
-
     public function My_trips()
     {
         $user_data = $this->session->userdata('logged_in');
