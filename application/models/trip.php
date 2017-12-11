@@ -44,5 +44,36 @@ class Trip extends CI_model
         $data = $query->result();
         return $data;
     }
+    public function Trip_data()
+    {
+        $query = $this->db->get('trip_data');
+        $data = $query->result();
+        return $data;
+    }
+    public function Vehicle_type()
+    {
+        $query = $this->db->get('vehicle_type');
+        $data = $query->result();
+        return $data;
+    }
+    public function Destination()
+    {
+        $query = $this->db->get('destination');
+        $data = $query->result();
+        return $data;
+    }
+    public function City()
+    {
+        $query = $this->db->get('city');
+        $data = $query->result();
+        return $data;
+    }
+    public function Pickup_location()
+    {
+        $query = $this->db->get('pickup_location');
+        $data = $query->result();
+        return $data;
+    }
+
 }
 ?>

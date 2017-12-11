@@ -14,8 +14,16 @@ class Logged_in extends CI_Controller
 
     public function choice()
     {
+        $this->load->model('trip');
+        //function call from model
+        $user['vehicle_type'] = $this->trip->Vehicle_type();
+        $user['city'] = $this->trip->City();
+        $user['destination'] = $this->trip->Destination();
+        $user['pickup_location'] = $this->trip->Pickup_location();
         $this->load->view('template/header');
-        $this->load->view('Login/plan_a_trip');
+        $this->load->view('Login/plan_a_trip',$user);
+       // $this->load->view('template/header');
+        //$this->load->view('Login/plan_a_trip');
         $this->load->view('template/footer');
     }
 
