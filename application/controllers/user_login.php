@@ -10,6 +10,7 @@ class User_login extends CI_Controller{
     $this->load->library('form_validation');
     $this->load->model('user_model');
     }
+    
     public function login(){
         $this->load->view('template/header');
         $this->load->view('login');
