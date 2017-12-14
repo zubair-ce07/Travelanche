@@ -1,9 +1,14 @@
+
 <?php
 
+<<<<<<< HEAD
 /*echo "data inserted successfully" ;
+=======
+>>>>>>> 2e96a62c2e8870de17718fef9ba8041746c7cdb3
 foreach ($trips as $row)
 {
     echo $row->vehicle;
+    echo  " ";
     echo $row->location_pickup;
 }
 */

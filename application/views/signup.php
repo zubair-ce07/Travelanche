@@ -46,18 +46,6 @@
     </div>
   </div>
 </div>
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label">Username</label>
-  <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-    <input  name="user_name" placeholder="City" class="form-control" required=""  type="text"  >
-    <span class="text-danger"> <?php echo form_error('Username'); ?></span>
-  </div>
-  </div>
-</div>
 
 <!-- Text input-->
 
@@ -66,45 +54,20 @@
   <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-      <input name="user_password" placeholder="Password" class="form-control" id="pass1" required=""  type="password">
+      <input name="password" placeholder="Password" class="form-control" id="pass1" required=""  type="password">
       <span class="text-danger"> <?php echo form_error('Password'); ?></span>
     </div>
   </div>
 </div>
 
 <!-- Text input-->
-
+       
 <div class="form-group">
-  <label class="col-md-4 control-label" >Confirm Password</label> 
+  <label class="col-md-4 control-label">City</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-  <input name="confirm_password" id="pass2" class="form-control" required=""  type="password" placeholder="Confirm Password">
-      <span class="text-danger"> <?php echo form_error('Password Confirmation'); ?></span>
-    </div>
-  </div>
-</div>
-
-<!-- Text input -->
-
-<div class="form-group">
-  <label class="col-md-4 control-label" >Home Address</label> 
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-  <input name="address" placeholder="Home Address" class="form-control" required=""   type="text">
-    </div>
-  </div>
-</div>
-
-<!-- Text input-->
-       <div class="form-group">
-  <label class="col-md-4 control-label">E-Mail</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-      <input name="email" placeholder="E-Mail Address" class="form-control" required="" type="text">
-      <span class="text-danger"> <?php echo form_error('Email'); ?></span>
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+        <input name="city" placeholder="city" class="form-control" required=""  type="text">
     </div>
   </div>
 </div>
@@ -113,14 +76,15 @@
 <!-- Text input-->
        
 <div class="form-group">
-  <label class="col-md-4 control-label">Contact No.</label>  
+  <label class="col-md-4 control-label">Phone</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-        <input name="contact_no" placeholder="(+92)" class="form-control" required=""  type="text">
+        <input name="phone" placeholder="(+92)" class="form-control" required=""  type="text">
     </div>
   </div>
 </div>
+
 
 <!-- Select Basic -->
 
