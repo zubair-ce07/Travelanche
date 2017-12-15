@@ -53,7 +53,7 @@ a.btn-default{
 </style>
 
 <body>
-    <img class="img-responsive" style="width:100%; height:400px; " src="<?php echo base_url('assets/images/Bost.png'); ?>" > </img>
+    <img class="img-responsive" style="width:100%; height:500px; " src="<?php echo base_url('assets/images/Bost.png'); ?>" > </img>
     <div class="centered"  style="">Travelanche</div>
                 <!-- <a href = "<?php echo site_url('Logged_in/Choice'); ?>" class = "btn btn-lg btn-success"> Plan a trip </a> -->
             </div>

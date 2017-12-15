@@ -1,18 +1,3 @@
-
-<?php
-
-<<<<<<< HEAD
-/*echo "data inserted successfully" ;
-=======
->>>>>>> 2e96a62c2e8870de17718fef9ba8041746c7cdb3
-foreach ($trips as $row)
-{
-    echo $row->vehicle;
-    echo  " ";
-    echo $row->location_pickup;
-}
-*/
-?>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
@@ -24,7 +9,6 @@ foreach ($trips as $row)
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <link href="<?php echo base_url(); ?>assets2/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <!--Custom-Theme-files-->
 

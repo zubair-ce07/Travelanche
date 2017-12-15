@@ -31,7 +31,7 @@ class User_model extends CI_model{
         //$this->db->select('email','pass');
         //$this->db->from('users');
         $this->db->where('phone', $phone);
-        $this->db->where('password', $pass);
+        $this->db->where('pass', $pass);
         $this->db->limit(1);
         $query = $this->db->get('users');
         if ($query-> num_rows() > 0) {
