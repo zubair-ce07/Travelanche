@@ -24,7 +24,9 @@ class User_login extends CI_Controller{
         // Check for remember_me data in retrieved session data
         if (isset($session_set_value['remember_me']) && $session_set_value['remember_me'] == "1") 
         {
-                $this->load->view('template/header');
+                $this->load->model('user_model');
+                $user_namee['user_name'] = $this->session->userdata('user');
+                $this->load->view('template/header_after_login',$user_namee);
                 $this->load->view('Login/main');
                 $this->load->view('template/footer');
         } 
@@ -61,7 +63,16 @@ class User_login extends CI_Controller{
                         // $this->session->set_userdata($session_data);
                     /* same controller called with method "enter" */
                         //redirect('user_login/enter' , 'refresh');
-                        $this->load->view('template/header');
+                        $this->load->model('user_model');
+                        $user_name = $this->user_model->user_name();
+                        foreach($user_name as $row)
+                        {
+                            $user['user_name'] = $row->user_name;
+                            
+                        }
+                        $userr =   $user['user_name'];
+                        $this->session->set_userdata('user', $userr);
+                        $this->load->view('template/header_after_login',$user);
                         $this->load->view('Login/main');
                         $this->load->view('template/footer');
                 }

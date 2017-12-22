@@ -20,7 +20,8 @@ class Logged_in extends CI_Controller
         $user['city'] = $this->trip->City();
         $user['destination'] = $this->trip->Destination();
         $user['pickup_location'] = $this->trip->Pickup_location();
-        $this->load->view('template/header');
+        $user_namee['user_name'] = $this->session->userdata('user');
+        $this->load->view('template/header_after_login',$user_namee);
         $this->load->view('Login/plan_a_trip',$user);
        // $this->load->view('template/header');
         //$this->load->view('Login/plan_a_trip');
@@ -31,7 +32,8 @@ class Logged_in extends CI_Controller
     {
         $this->load->model('trip');
         $this->trip->Trip_details(); //function call from model
-        $this->load->view('template/header');
+        $user_namee['user_name'] = $this->session->userdata('user');
+        $this->load->view('template/header_after_login',$user_namee);
         $this->load->view('success');
         $this->load->view('template/footer');
 
@@ -41,7 +43,8 @@ class Logged_in extends CI_Controller
     {
         $this->load->model('trip');
         $user_trips['trips'] = $this->trip->My_trips(); //function call from model
-        $this->load->view('template/header');
+        $user_namee['user_name'] = $this->session->userdata('user');
+        $this->load->view('template/header_after_login',$user_namee);
         $this->load->view('Login/My_trips',$user_trips);
         $this->load->view('template/footer');
     }

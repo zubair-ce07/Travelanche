@@ -79,7 +79,7 @@ a.btn-default{
 </div>
     
 
-    <div id="profile">
+  <!--  <div id="profile">
         <?php
         echo "Hello <b id='welcome'><i>" . $session_data['phone'] . "</i> !</b>";
         echo "Welcome to Admin Page";
@@ -87,7 +87,7 @@ a.btn-default{
     </div>
     <b id="logout"><a href="logout">Logout</a></b>
 </div>
-
+-->
 
 
 </body>

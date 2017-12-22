@@ -12,7 +12,8 @@
 </style>
 
 <body>
-<div class="container">
+<div class="container" >
+
 <form class="well form-horizontal" action="<?php echo site_url('logged_in/Trip_info'); ?> " method="post"  id="contact_form">
 <fieldset>
 <!-- Form Name -->
@@ -21,7 +22,8 @@
 
 <!-- Text input-->
 
-<div class="form-group">
+
+<div class="form-group" >
   <label class="col-md-4 control-label">Choose Destination</label>  
   <div class="col-md-4 inputGroupContainer">
      <div class="input-group">

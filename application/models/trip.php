@@ -27,8 +27,9 @@ class Trip extends CI_model
             $pickup_time = $_POST['pickup_time'];
             $drop_time = $_POST['drop_time'];
             $trip_disc = $_POST['trip_disc'];
-            $sql = "INSERT INTO trip(destination, vehicle, start_date, end_date, time_pickup, time_drop, trip_description, location_pickup,user_phone)
-                      VALUES('$destination','$vehicle','$start_date','$end_date','$pickup_time','$drop_time','$trip_disc','$pickup_location','$phone')";
+            $user_city = $_POST['city'];
+            $sql = "INSERT INTO trip(destination, vehicle, start_date, end_date, time_pickup, time_drop, trip_description, location_pickup,user_phone,timestamp,user_city)
+                      VALUES('$destination','$vehicle','$start_date','$end_date','$pickup_time','$drop_time','$trip_disc','$pickup_location','$phone',CURTIME(),'$user_city')";
 
             $this->db->query($sql);
             }

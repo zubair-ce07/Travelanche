@@ -22,7 +22,7 @@
 
 <div class="inner-content" id="services">
     <div class="wrap">
-        <h3 class="tittle wow fadeInUp animated animated" data-wow-delay=".5s">Services</h3>
+        <h3 class="tittle wow fadeInUp animated animated" data-wow-delay=".5s"></h3>
         <!--start-top_section-->
         <div class="top_section">
             <div class="bnr-btm-left grid">

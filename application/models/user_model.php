@@ -21,7 +21,7 @@ class User_model extends CI_model{
                 $city = $_POST['city'];
                 $pass = $_POST['password'];
                 $phone = $_POST['phone'];
-                $sql = "INSERT INTO users(first_name, last_name, city, password, phone)
+                $sql = "INSERT INTO users(first_name, last_name, city, pass, phone)
                           VALUES('$f_name','$l_name','$city','$pass','$phone')";
                 $this->db->query($sql);
         }
@@ -31,7 +31,7 @@ class User_model extends CI_model{
         //$this->db->select('email','pass');
         //$this->db->from('users');
         $this->db->where('phone', $phone);
-        $this->db->where('pass', $pass);
+        $this->db->where('pass', $pass); 
         $this->db->limit(1);
         $query = $this->db->get('users');
         if ($query-> num_rows() > 0) {
@@ -42,7 +42,16 @@ class User_model extends CI_model{
             }
     }
 
-    public function check_phone($phone){
+  public function user_name()
+    {
+        $user_data = $this->session->userdata('logged_in');
+        $phone = $user_data['phone'];
+        $this->db->where('phone', $phone);
+        $query = $this->db->get('users');
+        $data = $query->result();
+        return $data;
+    }
+      public function check_phone($phone){
         if (isset($_POST['phone'])) 
          $phone = $_POST['phone'];
          $this->db->where('phone', $phone);
