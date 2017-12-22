@@ -53,12 +53,19 @@ a.btn-default{
 </style>
 
 <body>
+   <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+  <h3 class="w3-bar-item">Menu</h3>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+</div>
+<div style="margin-left:15%">
+
     <img class="img-responsive" style="width:100%; height:500px; " src="<?php echo base_url('assets/images/Bost.png'); ?>" > </img>
     <div class="centered"  style="">Travelanche</div>
                 <!-- <a href = "<?php echo site_url('Logged_in/Choice'); ?>" class = "btn btn-lg btn-success"> Plan a trip </a> -->
-            </div>
-       </div>
-    </div> 
+        
+      <!-- Sidebar -->
 
     
     <div class="container">
@@ -73,8 +80,6 @@ a.btn-default{
         <a href="<?php echo site_url('Logged_in/my_Trips'); ?>" type="button" class="btn btn-default btn-lg btn-block" name="my_trips"> My trips</a>
         <a href="#" type="button" class="btn btn-default btn-lg btn-block" name="companies"> Companies</a>
     </div>
-    </div>
-    </div>
     <hr>   
 </div>
     
@@ -88,7 +93,6 @@ a.btn-default{
     <b id="logout"><a href="logout">Logout</a></b>
 </div>
 -->
-
-
+</div>
 </body>
 </html>
